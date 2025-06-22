@@ -5,10 +5,10 @@ A modern, minimal, and production-ready starter template built with Expo, React 
 ## Getting Started
 
 ### 1. Clone the repo
-git clone 
+git clone https://github.com/likithanagaraj/expo-nativewind.git
 
 ### 2. Navigate to the project folder
-cd 
+cd expo-nativewind
 
 ### 3. Install dependencies
 npm install
