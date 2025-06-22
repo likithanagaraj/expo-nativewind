@@ -1,21 +1,17 @@
-import { HapticTab } from "@/components/HapticTab";
-import { IconSymbol } from "@/components/ui/IconSymbol";
-import TabBarBackground from "@/components/ui/TabBarBackground";
+
 import "@/global.css";
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Tabs } from "expo-router";
 import React from "react";
 import { Platform } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function TabLayout() {
   return (
-   <SafeAreaView className="flex-1 bg-white ">
-     <Tabs
+   <Tabs
       screenOptions={{
         tabBarActiveTintColor: "#000", // Active tab color
+
         headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
           ios: {
             position: "absolute",
@@ -29,7 +25,7 @@ export default function TabLayout() {
         options={{
           title: "Home",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="house.fill" color={color} />
+            <FontAwesome name="home" size={24} color={color} />
           ),
         }}
       />
@@ -38,11 +34,10 @@ export default function TabLayout() {
         options={{
           title: "Explore",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="paperplane.fill" color={color} />
+            <FontAwesome name="search" size={24} color={color} />
           ),
         }}
       />
     </Tabs>
-   </SafeAreaView>
   );
 }
